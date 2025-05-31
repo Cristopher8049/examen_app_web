@@ -1,0 +1,26 @@
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    width: 100%;
+    max-width: 400px;
+}
+
+.search-bar__input {
+    flex: 1;
+    padding: 0.5rem;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+}
+
+.search-bar__result {
+    margin-top: 1rem;
+    font-family: monospace;
+    color: #333;
+}

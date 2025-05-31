@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "Item One",
+        "favorite": true
+    },
+    {
+        "id": 2,
+        "name": "Item Two",
+        "favorite": false
+    },
+    {
+        "id": 3,
+        "name": "Item Three",
+        "favorite": false
+    },
+    {
+        "id": 4,
+        "name": "Item Four",
+        "favorite": false
+    }
+]

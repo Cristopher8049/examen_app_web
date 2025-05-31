@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+
+    background-color: #ffffff;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+/* Reset / Box-sizing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    padding: 1rem;
+    line-height: 1.4;
+}
+
+/* === BLOQUE: all-items === */
+.all-items {
+    margin-bottom: 2rem;
+}
+
+.all-items__title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.all-items__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* === BLOQUE: item-card === */
+.item-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #fff;
+}
+
+.item-card__name {
+    font-weight: bold;
+}
+
+.item-card__heart {
+    cursor: pointer;
+    font-size: 1.25rem;
+    user-select: none;
+    transition: color 0.2s;
+    color: #bbb;
+}
+
+.item-card__heart.heart--liked {
+    color: crimson;
+}
+
+/* === BLOQUE: favorite-items === */
+.favorite-items {
+    margin-top: 2rem;
+}
+
+.favorite-items__title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.favorite-items__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.favorite-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem;
+    border: 1px solid #f2c0c0;
+    border-radius: 4px;
+    background-color: #fff0f2;
+}
+
+.favorite-item__name {
+    font-weight: normal;
+}
+
+.favorite-item__remove-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #900;
+    user-select: none;
+}
+
+.favorite-item__remove-btn:hover {
+    text-decoration: underline;
+}
+
+
+.save-button {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.save-button__btn {
+    padding: 0.5em 1em;
+    font-size: 1rem;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.save-button__btn:hover {
+    background-color: #0056b3;
+}

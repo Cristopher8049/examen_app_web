@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mis Ítems con Búsqueda</title>
+
+    <link rel="stylesheet" href="./blocks/styles.css" />
+
+    <link rel="stylesheet" href="./blocks/searchBar/searchBar.css" />
+
+    <script src="./app.js" defer type="module"></script>
+    <script src="./blocks/searchBar/searchbar.js" defer type="module"></script>
+</head>
+
+<body>
+    <h1>Mis Ítems</h1>
+
+
+    <template id="search-bar-template">
+        <div class="search-bar">
+            <input type="text" class="search-bar__input" placeholder="Buscar ítem..." />
+        </div>
+        <div class="search-bar__result"></div>
+    </template>
+    <search-bar-page></search-bar-page>
+
+
+    <search-bar></search-bar>
+
+
+    <section class="all-items">
+        <h2 class="all-items__title">Todos los ítems</h2>
+        <item-list class="all-items__list"></item-list>
+    </section>
+
+
+    <template id="item-card-template">
+        <div class="item-card">
+            <span class="item-card__name"></span>
+            <span class="item-card__heart"></span>
+        </div>
+    </template>
+
+
+    <template id="favorite-item-template">
+        <div class="favorite-item">
+            <span class="favorite-item__name"></span>
+            <button class="favorite-item__remove-btn" title="Quitar de favoritos">&times;</button>
+        </div>
+    </template>
+
+
+    <template id="save-button-template">
+        <button class="save-button__btn">
+            <slot>Guardar Favoritos</slot>
+        </button>
+    </template>
+
+    <save-button class="save-button">Guardar Favoritos</save-button>
+
+
+    <section class="favorite-items">
+        <h2 class="favorite-items__title">Ítems Favoritos</h2>
+        <favorite-list class="favorite-items__list"></favorite-list>
+    </section>
+</body>
+
+</html>
