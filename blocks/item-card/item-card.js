@@ -35,6 +35,8 @@ export default class ItemCard extends HTMLElement {
         this.heartSpan.textContent = "♡";
         this.heartSpan.classList.remove("heart--liked");
       }
+
+      this.dispatchEvent(new Event("liked", { bubbles: true, composed: true }))
     });
   }
 }

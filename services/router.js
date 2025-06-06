@@ -19,6 +19,16 @@ const router = {
         if (addToHistory) {
             history.pushState({ route }, "", route);
         }
+        let pageElement = null;
+
+    switch(route){
+        case '/':
+        pageElement = document.createElement("home");
+        break;
+
+        case '/item':
+        pageElement = document.createElement('item-page')
+    }
 
 
     }

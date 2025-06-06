@@ -5,19 +5,19 @@ export default class FavoriteList extends HTMLElement {
     constructor() {
         super();
         this._store = ItemStore.getInstance();
-        this._onFavoritesChange = this._onFavoritesChange.bind(this);
     }
 
     connectedCallback() {
-        this._store.subscribe(this._onFavoritesChange);
-        this._onFavoritesChange(this._store.getFavorites());
+        document.addEventListener("liked", () => {
+            this.render();
+        })
+
+        this.render();
     }
 
-    disconnectedCallback() {
-        this._store.unsubscribe(this._onFavoritesChange);
-    }
+    render() {
+        const favArray = this._store.getFavorites();
 
-    _onFavoritesChange(favArray) {
         this.innerHTML = "";
         if (!favArray || favArray.length === 0) {
             this.innerHTML = "<p>No hay favoritos marcados.</p>";
@@ -28,7 +28,13 @@ export default class FavoriteList extends HTMLElement {
             favItem.dataset.item = JSON.stringify({ id: item.id, name: item.name });
             this.appendChild(favItem);
         });
+
     }
+
+    disconnectedCallback() {
+        this._store.unsubscribe();
+    }
+
 }
 
 customElements.define("favorite-list", FavoriteList);

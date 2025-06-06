@@ -12,11 +12,11 @@ import ItemStore from "./services/itemStore.js";
 
 window.addEventListener("DOMContentLoaded", async () => {
 
-    const invoker = new KeyboardInvoker();
+    // const invoker = new KeyboardInvoker();
     const searchBarPage = document.querySelector("search-bar-page");
-    if (searchBarPage) {
-        invoker.registerCommand("Ctrl+K", new FocusSearchCommand(searchBarPage));
-    }
+    // if (searchBarPage) {
+    //     invoker.registerCommand("Ctrl+K", new FocusSearchCommand(searchBarPage));
+    // }
 
 
     const itemStore = ItemStore.getInstance();
